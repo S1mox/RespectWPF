@@ -1,0 +1,41 @@
+﻿<Window x:Name="ProfilePageForm" x:Class="RespectWPF.Views.ProfilePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RespectWPF.Views"
+        mc:Ignorable="d"
+        Title="Профиль" Height="497" Width="600" Background="#FFF5F5F6" ResizeMode="NoResize" Icon="/RespectWPF;component/logo_smallico.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel x:Name="MainProfilePanel" Opacity="0.95" Margin="15">
+            <StackPanel x:Name="ProfileInfo" Orientation="Horizontal">
+                <Image x:Name="ProfileImage" Height="160" Width="200" HorizontalAlignment="Left" Margin="50,20,0,20">
+                    <Image.CacheMode>
+                        <BitmapCache/>
+                    </Image.CacheMode>
+                </Image>
+                <StackPanel  Height="160" Width="265" Margin="40,20,0,20" >
+                    <Label x:Name="User_name" Content="Имя пользователя" Opacity="0.6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="0,50,0,0">
+                        <Label.Background>
+                            <SolidColorBrush Color="#FFEAEAF1"/>
+                        </Label.Background>
+                    </Label>
+                    <Label x:Name="User_status" Content="Статус пользователя" Opacity="0.6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Background="#FFEAEAF1" Margin="0,10,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            <Label x:Name="RoomsLabel" Content="Комнаты" HorizontalAlignment="Center" FontSize="20"/>
+            <ListView x:Name="rooms_list" Height="153" Background="#FFF5F5F6">
+                <ListView.CacheMode>
+                    <BitmapCache/>
+                </ListView.CacheMode>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Content="Обновить" Background="#FF000A12" Foreground="Snow" Height="20" Margin="0,20,0,0"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

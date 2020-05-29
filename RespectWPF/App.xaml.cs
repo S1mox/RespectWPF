@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using RespectWPF.Views;
 
 namespace RespectWPF
 {
@@ -13,5 +14,11 @@ namespace RespectWPF
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            CachingData.CurrentData.UpdateData();
+
+            ShutdownMode = ShutdownMode.OnLastWindowClose;
+        }
     }
 }
